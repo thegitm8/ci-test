@@ -4,7 +4,8 @@
   "description": "test setup for CI/CD pipeline with travisCI",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Running tests...'; sleep 2; printf '\\033[0;32mTests complete!\\033[0m\\n'"
+    "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
+    "test": "printf '\\033[0;32mTests complete!\\033[0m\\n'"
   },
   "repository": {
     "type": "git",
