@@ -5,8 +5,8 @@ node_js:
   - 6
 
 script:
-- npm run build
-- npm test
+- npm --silent run build
+- npm --silent test
 
 jobs:
   include:
