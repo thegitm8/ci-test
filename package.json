@@ -1,0 +1,33 @@
+{
+  "name": "ci-test",
+  "version": "0.1.0",
+  "description": "test setup for CI/CD pipeline with travisCI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Running tests...'; sleep 2; printf '\\033[0;32mTests complete!\\033[0m\\n'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thegitm8/ci-test.git"
+  },
+  "keywords": [
+    "test",
+    "CI",
+    "travisCI",
+    "CD"
+  ],
+  "author": "Doc <mail@antlike.tech>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/thegitm8/ci-test/issues"
+  },
+  "homepage": "https://github.com/thegitm8/ci-test#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
