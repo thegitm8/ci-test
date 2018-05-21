@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
-    "test": "node test.js; printf '\\033[0;32mTests complete!\\033[0m\\n'"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
