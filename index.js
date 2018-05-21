@@ -1,1 +1,1 @@
-console.log('ci-test')
+console.log(`ci-test ${require('./package').version}`)
