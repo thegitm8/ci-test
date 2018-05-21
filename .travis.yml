@@ -17,6 +17,8 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
+          - npm run build
+          - echo test
           - echo $TEST_VAR
         on:
           branch: master
