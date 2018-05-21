@@ -1,5 +1,1 @@
-console.log(`ci-test ${require('./package').version}`)
-
-async function test() {
-  return await new Promise().resolve()
-}
+console.log(`ci-test ${require('./package').version} test passed!`)
