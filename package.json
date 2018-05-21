@@ -1,12 +1,13 @@
 {
-  "name": "ci-test",
+  "name": "@gitm8/ci-test",
   "version": "0.1.0",
   "description": "test setup for CI/CD pipeline with travisCI",
   "main": "index.js",
   "scripts": {
     "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
     "test": "node test.js",
-    "release": "npm run --silent build && semantic-release"
+    "release": "npm run --silent build && semantic-release",
+    "ping": "node -e \"console.log(require('process').env)\""
   },
   "repository": {
     "type": "git",
