@@ -18,7 +18,6 @@ jobs:
         skip_cleanup: true
         script:
           - npm run build
-          - echo test
-          - echo $TEST_VAR
+          - npx semantic-release
         on:
           branch: master
