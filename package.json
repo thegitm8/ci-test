@@ -1,5 +1,5 @@
 {
-  "name": "@gitm8/ci-test",
+  "name": "ci-test-do-not-install",
   "version": "0.1.0",
   "description": "test setup for CI/CD pipeline with travisCI",
   "main": "index.js",
