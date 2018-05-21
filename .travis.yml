@@ -7,8 +7,8 @@ node_js:
 jobs:
   include:
     - stage: publish
-      node_js: 8
       script: skip
+      node_js: 8
       deploy:
         provider: script
         skip_cleanup: true
