@@ -19,6 +19,11 @@ jobs:
       env: JOB=lint
       script: npm run lint
     - stage: test
+      env: JOB=dependency-check
+      script:
+        - npm i -g snyk
+        - snyk test
+    - stage: test
       node_js: 8
       env: JOB=unit-test
       script: npm test
