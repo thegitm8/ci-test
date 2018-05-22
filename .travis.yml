@@ -1,4 +1,5 @@
 language: node_js
+node_js: lts/*
 
 notifications:
   email: false
@@ -15,7 +16,6 @@ install:
 jobs:
   include:
     - stage: test
-      node_js: lts/*
       env:
         - JOB=lint
       script: npm run lint
@@ -30,7 +30,6 @@ jobs:
         - JOB=unit-test
       script: npm test
     - stage: release
-      node_js: lts/*
       env:
         - JOB=publish
       deploy:
