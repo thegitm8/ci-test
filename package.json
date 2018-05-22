@@ -1,7 +1,7 @@
 {
   "name": "@gitm8/ci-test",
   "license": "Apache-2.0",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "test setup for CI/CD pipeline with travisCI",
   "author": "Doc <mail@antlike.tech>",
   "main": "dist/index.js",

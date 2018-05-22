@@ -1,3 +1,11 @@
+<a name="1.4.1"></a>
+## [1.4.1](https://github.com/thegitm8/ci-test/compare/v1.4.0...v1.4.1) (2018-05-22)
+
+
+### Bug Fixes
+
+* trigger release ([0b1985e](https://github.com/thegitm8/ci-test/commit/0b1985e))
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/thegitm8/ci-test/compare/v1.3.3...v1.4.0) (2018-05-22)
 
