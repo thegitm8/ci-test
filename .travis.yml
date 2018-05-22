@@ -17,8 +17,8 @@ notifications:
 
 script:
 - npm --silent run build
-- npm --silent test:unit
-- npm --silent test:lint
+- npm --silent run test:unit
+- npm --silent run test:lint
 
 jobs:
   include:
