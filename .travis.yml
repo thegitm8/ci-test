@@ -17,26 +17,29 @@ jobs:
   include:
     # Linting
     - stage: tests and pre-checks
-      env: JOB=lint
+      env: DO=linting
       script: npm run lint
+
     # Depenedency checking
     - stage: tests and pre-checks
-      env: JOB=dependency-check
+      env: DO=dependency-checking
       script:
         - npm i -g snyk
         - snyk test
+
     # Unit tests
     - stage: tests and pre-checks
       node_js: 8
-      env: JOB=unit-test
+      env: DO=unit-testing
       script: npm test
     - stage: tests and pre-checks
       node_js: 6
-      env: JOB=unit-test
+      env: DO=unit-testing
       script: npm test
+
     # Deploy
     - stage: deployment
-      env: JOB=publish
+      env: DO=publishing
       script: skip
       deploy:
         provider: script
