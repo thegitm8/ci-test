@@ -19,7 +19,7 @@ stages:
   - name: dependencies
     if: branch = master
   - name: deploy
-    if: branch = masterx
+    if: branch = master
 
 jobs:
   include:
@@ -27,7 +27,7 @@ jobs:
     - stage: test
       env: currently=linting
       install:
-        - npm i -g eslint eslint-config-airbnb-base
+        - npm i -g eslint eslint-config-airbnb-base eslint-plugin-import
       script: npm run lint
 
     # Unit tests
