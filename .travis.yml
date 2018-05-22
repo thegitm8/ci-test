@@ -30,8 +30,9 @@ jobs:
         - JOB=unit-test
       script: npm test
     - stage: release
-      script: skip
       node_js: lts/*
+      env:
+        - JOB=publish
       deploy:
         provider: script
         skip_cleanup: true
