@@ -15,6 +15,8 @@ install:
 
 stages:
   - test
+  - name: dependencies
+    if: branch = master
   - name: deploy
     if: branch = master
 
@@ -23,7 +25,8 @@ jobs:
     # Linting
     - stage: test
       env: DO=linting
-      install: skip
+      install:
+        - npm i -g eslint eslint-config-airbnb-base
       script: npm run lint
 
     # Unit tests
@@ -38,15 +41,13 @@ jobs:
       script: npm test
 
     # Depenedency checking
-    - stage: deploy
-      env: DO=dependency-checking
+    - stage: dependencies
       script:
         - npm i -g snyk
         - snyk test
 
     # Deploy
     - stage: deploy
-      env: DO=publishing
       script: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
       deploy:
         provider: script

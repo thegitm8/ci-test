@@ -22,21 +22,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "scripts": {
     "test": "node test.js",
     "lint": "eslint src/**",
     "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
     "release": "semantic-release"
-  },
-  "devDependencies": {
-    "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.12.0"
   }
 }
