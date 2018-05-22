@@ -1,4 +1,6 @@
-# ci-test
+[![npm version](https://badge.fury.io/js/%40gitm8%2Fci-test.svg)](https://badge.fury.io/js/%40gitm8%2Fci-test)
+[![npm](https://img.shields.io/npm/l/%40gitm8%2Fci-test.svg)](./LICENSE)
+
 Testing CI/CD for npm packages
 
 ## install and setup
