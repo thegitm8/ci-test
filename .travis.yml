@@ -6,10 +6,8 @@ jobs:
   include:
     - stage: test
       node_js: 8
-      script: npm run test
     - stage: test
       node_js: 6
-      script: npm run test
     - stage: release
       script: skip
       node_js: 8
