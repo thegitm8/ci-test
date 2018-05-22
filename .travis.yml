@@ -48,7 +48,7 @@ jobs:
         - snyk test
 
     - stage: dependencies
-        script: npx npm-check -p
+      script: npx npm-check -p
 
     # Deploy
     - stage: deploy
