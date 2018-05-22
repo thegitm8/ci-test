@@ -7,6 +7,10 @@ install:
   - npm run build
 
 
+node_js:
+  - 8
+  - 6
+
 jobs:
   include:
     - stage: test
@@ -17,9 +21,7 @@ jobs:
         - node_modules
         - ~/.nvmrc
     - stage: test
-      node_js: 8
-    - stage: test
-      node_js: 6
+      script: npm test
     - stage: release
       script: skip
       node_js: 8
