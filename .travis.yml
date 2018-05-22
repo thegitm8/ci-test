@@ -4,12 +4,15 @@ notifications:
 
 jobs:
   include:
+    # test stage
     - stage: test
       node_js: 8
       script: npm run test
+    - stage: test
       node_js: 6
       script: npm run test
-    - stage: publish
+    # release stage
+    - stage: release
       script: skip
       node_js: 8
       deploy:
