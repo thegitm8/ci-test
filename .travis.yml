@@ -10,6 +10,8 @@ cache:
     - "$HOME/.nvmrc"
     - "$HOME/.npm"
 
+env: RELEASE_BRANCH=master
+
 install:
   - npm install
   - npm run build
@@ -17,9 +19,9 @@ install:
 stages:
   - test
   - name: dependencies
-    if: branch = master
+    if: branch = $RELEASE_BRANCH
   - name: deploy
-    if: branch = master
+    if: branch = $RELEASE_BRANCH
 
 jobs:
   include:
