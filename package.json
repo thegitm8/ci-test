@@ -28,8 +28,8 @@
     }
   },
   "scripts": {
-    "test:unit": "node test.js",
-    "test:lint": "eslint src/**",
+    "test": "node test.js",
+    "lint": "eslint src/**",
     "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
     "release": "npm run --silent build && semantic-release"
   },

@@ -1,36 +1,14 @@
 language: node_js
-
-# node_js:
-#   # - 10
-#   # - 9
-#   - 8
-#   # - 7
-#   - 6
-
-# cache:
-#   directories:
-#   - node_modules
-#   - ~/.npm
-
-# notifications:
-  # email: false
-
-# script:
-# - npm --silent run build
-# - npm --silent run test:unit
+notifications:
+  email: false
 
 jobs:
   include:
     - stage: test
       node_js: 8
-      script:
-        - npm run build
-        - npm run test:unit
-    - stage: test
+      script: npm run test
       node_js: 6
-      script:
-        - npm run build
-        - npm run test:unit
+      script: npm run test
     - stage: publish
       script: skip
       node_js: 8
