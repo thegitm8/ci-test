@@ -22,11 +22,13 @@
 jobs:
   include:
     - stage: test
+      language: node_js
       node_js: 8
       script:
         - npm run build
         - npm run test:unit
     - stage: test
+      language: node_js
       node_js: 6
       script:
         - npm run build
