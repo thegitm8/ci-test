@@ -4,6 +4,9 @@ notifications:
 
 jobs:
   include:
+    - stage: lint
+      node_js: 8
+      script: npm run lint
     - stage: test
       node_js: 8
     - stage: test
