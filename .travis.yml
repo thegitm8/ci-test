@@ -1,4 +1,4 @@
-language: node_js
+# language: node_js
 
 # node_js:
 #   # - 10
@@ -12,8 +12,8 @@ language: node_js
 #   - node_modules
 #   - ~/.npm
 
-notifications:
-  email: false
+# notifications:
+  # email: false
 
 # script:
 # - npm --silent run build
