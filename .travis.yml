@@ -17,9 +17,9 @@ jobs:
       node_js: 8
       script: npm run lint
       cache:
-      directories:
-        - node_modules
-        - ~/.nvmrc
+        directories:
+          - node_modules
+          - ~/.nvmrc
     - stage: test
       script: npm test
     - stage: release
