@@ -39,6 +39,7 @@ jobs:
 
     # Deploy
     - stage: deployment
+      if: branch = master
       env: DO=publishing
       script: skip
       deploy:
@@ -46,5 +47,3 @@ jobs:
         skip_cleanup: true
         script:
           - npm run release
-        on:
-          branch: master
