@@ -9,9 +9,6 @@ install:
 
 
 
-node_js:
-  - 8
-  - 6
 jobs:
   include:
     - stage: lint
@@ -22,6 +19,10 @@ jobs:
           - node_modules
           - ~/.nvmrc
     - stage: test
+      node_js: 8
+      script: npm test
+    - stage: test
+      node_js: 6
       script: npm test
     - stage: release
       script: skip
