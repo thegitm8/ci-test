@@ -16,22 +16,18 @@ install:
 jobs:
   include:
     - stage: test
-      env:
-        - JOB=lint
+      env: JOB=lint
       script: npm run lint
     - stage: test
       node_js: 8
-      env:
-        - JOB=unit-test
+      env: JOB=unit-test
       script: npm test
     - stage: test
       node_js: 6
-      env:
-        - JOB=unit-test
+      env: JOB=unit-test
       script: npm test
     - stage: release
-      env:
-        - JOB=publish
+      env: JOB=publish
       deploy:
         provider: script
         skip_cleanup: true
