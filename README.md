@@ -9,12 +9,12 @@ Testing CI/CD for npm packages. Goal is to be able to just write business logic 
 
 Install the following packages:
 ```Shell
-npm i -g commitizen
-npm i -D \
+npm i -g \
+  commitizen \
   cz-conventional-changelog \
-  semantic-release \
-  @semantic-release/changelog \
-  @semantic-release/git
+  eslint \
+  eslint-config-airbnb-base \
+  eslint-plugin-import
 ```
 
 ## expected interface
@@ -24,7 +24,6 @@ Command|Description
 ---|---
 `npm test`|all tests (including linting and dependency checks) go here
 `npm run build`|triggering a build (MUST exist and exit with 0)
-`npm run release`|trigger semantic-release process
 
 
 ## environment variables
