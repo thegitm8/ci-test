@@ -1,27 +1,31 @@
+# CI/CD pipeline for npm packages
+# by Doc <mail@antlike.tech>
+
 language: node_js
 node_js: lts/*
 
 notifications:
   email: false
 
+# global caching
 cache:
   directories:
     - node_modules
     - "$HOME/.nvmrc"
     - "$HOME/.npm"
 
-env: RELEASE_BRANCH=master
-
+# global install
 install:
   - npm install
   - npm run build
 
+# controlling stages
 stages:
   - test
   - name: dependencies
-    if: branch = $RELEASE_BRANCH
+    if: branch = master
   - name: deploy
-    if: branch = $RELEASE_BRANCH
+    if: branch = master
 
 jobs:
   include:
