@@ -1,32 +1,31 @@
 language: node_js
 
+node_js:
+  # - 10
+  # - 9
+  - 8
+  # - 7
+  - 6
 
+cache:
+  directories:
+  - node_modules
+  - ~/.npm
+
+notifications:
+  email: false
+
+script:
+- npm --silent run build
+- npm --silent run test:unit
 
 jobs:
   include:
     - stage: lint
-      node_js:
-        # - 10
-        # - 9
-        - 8
-        # - 7
-        - 6
-
-      cache:
-        directories:
-        - node_modules
-        - ~/.npm
-
-      notifications:
-        email: false
-
-      # env:
-      #   - TEST_SUITE=units
-      #   - TEST_SUITE=lint
-
       script:
-      - npm --silent run build
-      - npm --silent run test:unit
+        - npm run build
+        - npm run test:lint
+      node_js: 8
     - stage: publish
       script: skip
       node_js: 8
