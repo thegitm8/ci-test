@@ -21,35 +21,33 @@ stages:
 jobs:
   include:
     # Linting
-    - stage: test
-      env: DO=linting
-      script: npm run lint
+    # - stage: test
+    #   env: DO=linting
+    #   script: npm run lint
 
-    # Depenedency checking
-    - stage: test
-      env: DO=dependency-checking
-      script:
-        - npm i -g snyk
-        - snyk test
+    # # Depenedency checking
+    # - stage: test
+    #   env: DO=dependency-checking
+    #   script:
+    #     - npm i -g snyk
+    #     - snyk test
 
-    # Unit tests
-    - stage: test
-      node_js: 8
-      env: DO=unit-testing
-      script: npm test
+    # # Unit tests
+    # - stage: test
+    #   node_js: 8
+    #   env: DO=unit-testing
+    #   script: npm test
 
-    - stage: test
-      node_js: 6
-      env: DO=unit-testing
-      script: npm test
+    # - stage: test
+    #   node_js: 6
+    #   env: DO=unit-testing
+    #   script: npm test
 
     # Deploy
     - stage: deploy
       env: DO=publishing
-      script: skip
+      script: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - npm i -g semantic-release @semantic-release/changelog @semantic-release/git
-          - semantic-release
+        script: semantic-release
