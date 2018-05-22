@@ -1,2 +1,24 @@
 # ci-test
-just a test repo
+Testing CI/CD for npm packages
+
+## expected interface
+The application/library/package MUST expose the following commands:
+
+Command|Description
+---|---
+`npm test`|all tests (including linting and dependency checks) go here
+`npm run build`|triggering a build (MUST exist and exit with 0)
+
+
+## environment variables
+CI has to set the following environment variables:
+
+env|usecase|where to get
+---|---|---
+`GH_TOKEN`|push tags and updated files to GitHub|[GitHub personal API token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) (set `repo` scope)
+`NPM_TOKEN`|publish package to NPM registry|[NPM API token](https://docs.npmjs.com/getting-started/working_with_tokens#how-to-create-new-tokens)
+
+## ToDo
+* [] add code coverage
+* [] add dependency check
+* [] add linting
