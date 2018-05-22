@@ -19,27 +19,27 @@ stages:
   - name: dependencies
     if: branch = master
   - name: deploy
-    if: branch = master
+    if: branch = masterx
 
 jobs:
   include:
-    # Linting
-    - stage: test
-      env: DO=linting
-      install:
-        - npm i -g eslint eslint-config-airbnb-base
-      script: npm run lint
+    # # Linting
+    # - stage: test
+    #   env: DO=linting
+    #   install:
+    #     - npm i -g eslint eslint-config-airbnb-base
+    #   script: npm run lint
 
-    # Unit tests
-    - stage: test
-      node_js: 8
-      env: DO=unit-testing
-      script: npm test
+    # # Unit tests
+    # - stage: test
+    #   node_js: 8
+    #   env: DO=unit-testing
+    #   script: npm test
 
-    - stage: test
-      node_js: 6
-      env: DO=unit-testing
-      script: npm test
+    # - stage: test
+    #   node_js: 6
+    #   env: DO=unit-testing
+    #   script: npm test
 
     # Depenedency checking
     - stage: dependencies
@@ -48,7 +48,7 @@ jobs:
         - snyk test
 
     - stage: dependencies
-      script: npx npm-check -p
+      script: npx npm-check -ps
 
     # Deploy
     - stage: deploy
