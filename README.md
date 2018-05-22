@@ -34,6 +34,6 @@ env|usecase|where to get
 `NPM_TOKEN`|publish package to NPM registry|[NPM API token](https://docs.npmjs.com/getting-started/working_with_tokens#how-to-create-new-tokens)
 
 ## ToDo
-* [] add code coverage
-* [] add dependency check
-* [] add linting
+* [ ] add code coverage
+* [ ] add dependency check
+* [ ] add linting
