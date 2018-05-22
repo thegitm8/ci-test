@@ -16,21 +16,15 @@ install:
 stages:
   - test
   - name: deploy
-    if: branch = develop
+    if: branch = master
 
 jobs:
   include:
     # Linting
     - stage: test
       env: DO=linting
+      install: skip
       script: npm run lint
-
-    # Depenedency checking
-    - stage: test
-      env: DO=dependency-checking
-      script:
-        - npm i -g snyk
-        - snyk test
 
     # Unit tests
     - stage: test
@@ -42,6 +36,13 @@ jobs:
       node_js: 6
       env: DO=unit-testing
       script: npm test
+
+    # Depenedency checking
+    - stage: deploy
+      env: DO=dependency-checking
+      script:
+        - npm i -g snyk
+        - snyk test
 
     # Deploy
     - stage: deploy
