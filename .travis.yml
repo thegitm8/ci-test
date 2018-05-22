@@ -25,7 +25,7 @@ jobs:
       script: npm test
     - stage: release
       script: skip
-      node_js: 8
+      node_js: lts/*
       deploy:
         provider: script
         skip_cleanup: true
