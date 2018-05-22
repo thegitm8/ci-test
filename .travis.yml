@@ -28,6 +28,7 @@ jobs:
       script: npm test
     - stage: release
       env: JOB=publish
+      script: skip
       deploy:
         provider: script
         skip_cleanup: true
