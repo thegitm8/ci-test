@@ -3,20 +3,48 @@
 [![npm version](https://badge.fury.io/js/%40gitm8%2Fci-test.svg)](https://badge.fury.io/js/%40gitm8%2Fci-test)
 [![npm](https://img.shields.io/npm/l/%40gitm8%2Fci-test.svg)](./LICENSE)
 
-Testing CI/CD for npm packages
+Testing CI/CD for npm packages. Goal is to be able to just write business logic in libraries (or any package) you develop, without caring about release. EVER.
 
 ## install and setup
 
-```
+Install the following packages:
+```Shell
 npm i -g commitizen
-npm i -D cz-conventional-changelog semantic-release
+npm i -D \
+  cz-conventional-changelog \
+  semantic-release \
+  @semantic-release/changelog \
+  @semantic-release/git
 ```
 
 Update package.json to include
-```
+```JSON
 "config": {
   "commitizen": {
     "path": "./node_modules/cz-conventional-changelog"
+  },
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
   }
 }
 ```
