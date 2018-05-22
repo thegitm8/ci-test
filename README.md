@@ -27,6 +27,7 @@ Command|Description
 ---|---
 `npm test`|all tests (including linting and dependency checks) go here
 `npm run build`|triggering a build (MUST exist and exit with 0)
+`npm run release`|trigger semantic-release process
 
 
 ## environment variables
