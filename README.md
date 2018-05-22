@@ -1,6 +1,21 @@
 # ci-test
 Testing CI/CD for npm packages
 
+## install and setup
+
+```
+npm i -g commitizen
+npm i -D cz-conventional-changelog semantic-release
+```
+
+Update package.json to include
+```
+"config": {
+  "commitizen": {
+    "path": "./node_modules/cz-conventional-changelog"
+  }
+}
+```
 ## expected interface
 The application/library/package MUST expose the following commands:
 
