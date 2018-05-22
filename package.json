@@ -31,7 +31,7 @@
     "test": "node test.js",
     "lint": "eslint src/**",
     "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
-    "release": "npm run --silent build && semantic-release"
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.2",
