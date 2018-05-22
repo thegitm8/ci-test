@@ -15,24 +15,27 @@ install:
 
 jobs:
   include:
-    - stage: test
+    # Linting
+    - stage: tests and pre-checks
       env: JOB=lint
       script: npm run lint
-    - stage: test
+    # Depenedency checking
+    - stage: tests and pre-checks
       env: JOB=dependency-check
       script:
         - npm i -g snyk
         - snyk test
-    - stage: test
+    # Unit tests
+    - stage: tests and pre-checks
       node_js: 8
       env: JOB=unit-test
       script: npm test
-    - stage: test
+    - stage: tests and pre-checks
       node_js: 6
       env: JOB=unit-test
       script: npm test
-    # Release stage
-    - stage: release
+    # Deploy
+    - stage: deployment
       env: JOB=publish
       script: skip
       deploy:
