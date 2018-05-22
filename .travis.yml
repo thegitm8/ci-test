@@ -31,6 +31,7 @@ jobs:
       node_js: 6
       env: JOB=unit-test
       script: npm test
+    # Release stage
     - stage: release
       env: JOB=publish
       script: skip
