@@ -14,41 +14,42 @@ install:
   - npm run build
 
 stages:
-  - tests and pre-checks
-  - name: deployment
+  - test
+  - name: deploy
     if: branch = master
 
 jobs:
   include:
     # Linting
-    - stage: tests and pre-checks
+    - stage: test
       env: DO=linting
       script: npm run lint
 
     # Depenedency checking
-    - stage: tests and pre-checks
+    - stage: test
       env: DO=dependency-checking
       script:
         - npm i -g snyk
         - snyk test
 
     # Unit tests
-    - stage: tests and pre-checks
+    - stage: test
       node_js: 8
       env: DO=unit-testing
       script: npm test
 
-    - stage: tests and pre-checks
+    - stage: test
       node_js: 6
       env: DO=unit-testing
       script: npm test
 
     # Deploy
-    - stage: deployment
+    - stage: deploy
       env: DO=publishing
       script: skip
       deploy:
         provider: script
         skip_cleanup: true
         script:
-          - npx semantic-release
+          - npm i -g semantic-release @semantic-release/changelog @semantic-release/git
+          - semantic-release
