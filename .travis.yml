@@ -15,10 +15,13 @@ cache:
 notifications:
   email: false
 
+env:
+  - TEST_SUITE=units
+  - TEST_SUITE=lint
+
 script:
 - npm --silent run build
-- npm --silent run test:unit
-- npm --silent run test:lint
+- npm --silent run test:$TEST_SUITE
 
 jobs:
   include:
