@@ -1,3 +1,12 @@
+<a name="1.5.1"></a>
+## [1.5.1](https://github.com/thegitm8/ci-test/compare/v1.5.0...v1.5.1) (2018-05-23)
+
+
+### Bug Fixes
+
+* fix code ([784eea9](https://github.com/thegitm8/ci-test/commit/784eea9))
+* improve buisness logic ;) ([1470993](https://github.com/thegitm8/ci-test/commit/1470993))
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/thegitm8/ci-test/compare/v1.4.1...v1.5.0) (2018-05-23)
 
