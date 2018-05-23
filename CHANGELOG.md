@@ -1,3 +1,11 @@
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/thegitm8/ci-test/compare/v1.4.1...v1.5.0) (2018-05-23)
+
+
+### Features
+
+* add test runner ([3005161](https://github.com/thegitm8/ci-test/commit/3005161))
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/thegitm8/ci-test/compare/v1.4.0...v1.4.1) (2018-05-22)
 
