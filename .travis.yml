@@ -39,6 +39,8 @@ jobs:
     - stage: test
       env: currently=coverage
       install:
+        - npm i
+        - npm run build
         - npm i -g nyc coveralls
       script: nyc npm test && nyc report --reporter=text-lcov | coveralls
 
