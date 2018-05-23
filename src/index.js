@@ -1,3 +1,3 @@
 const { version } = require('../package');
 
-console.log(`ci-test ${version}!`);
+module.exports = `ci-test v${version}`

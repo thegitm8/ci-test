@@ -23,9 +23,12 @@
     "access": "public"
   },
   "scripts": {
-    "test": "node test.js",
+    "test": "mocha test.js",
     "lint": "eslint src/**",
-    "build": "printf '\\033[0;32mBuild complete!\\033[0m\\n'",
+    "build": "cp -r src dist",
     "release": "semantic-release"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
