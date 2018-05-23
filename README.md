@@ -18,6 +18,13 @@ npm i -g \
   eslint-plugin-import
 ```
 
+## services used
+All external services used are free for open source projects and integrate with a GitHub account.
+
+* [travisCI](https://travis-ci.org) - CI/CD plattform
+* [Coverall](https://coveralls.io) - Code coverage
+* [Snyk](https://snyk.io/) - Dependency security checks
+
 ## expected interface
 The application/library/package MUST expose the following commands:
 
