@@ -4,6 +4,6 @@ const assert = require('assert');
 
 describe('Mock test', function() {
     it('tests stuff', function() {
-        assert.equal(`ci-test v${version}`, testString)
+        assert.equal(`My ci-test v${version}`, testString)
     })
 });
